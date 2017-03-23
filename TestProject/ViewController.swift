@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var lblTest: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -17,6 +19,9 @@ class ViewController: UIViewController {
         
         print("view did load")
     }
-
+    
+    @IBAction func btnClick(_ sender: Any) {
+        lblTest.text = "\(lblTest.text!)\n\(lblTest.text!)"
+    }
 }
 
